@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ZylofonApp());
 }
 
-class MyApp extends StatelessWidget {
+class ZylofonApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Container(
-        child: Text('This is an empty container'),
+      home: Scaffold(
+        body: SafeArea(
+          child: Container(),
+        ),
       ),
     );
   }
