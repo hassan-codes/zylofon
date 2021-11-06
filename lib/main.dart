@@ -12,17 +12,18 @@ class ZylofonApp extends StatelessWidget {
   }
 
   Widget buildKey({int keyNumber = 1, Color keyColor = Colors.black}) {
-    return TextButton(
-      onPressed: () {
-        playSound(keyNumber);
-      },
-      style: TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-      ),
-      child: Container(
-        height: 100.0,
-        color: keyColor,
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+    return Expanded(
+      child: TextButton(
+        onPressed: () {
+          playSound(keyNumber);
+        },
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+        ),
+        child: Container(
+          color: keyColor,
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+        ),
       ),
     );
   }
