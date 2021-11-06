@@ -11,6 +11,22 @@ class ZylofonApp extends StatelessWidget {
     player.play('note$noteNumber.wav');
   }
 
+  Widget buildKey({int keyNumber = 1, Color keyColor = Colors.black}) {
+    return TextButton(
+      onPressed: () {
+        playSound(keyNumber);
+      },
+      style: TextButton.styleFrom(
+        padding: EdgeInsets.zero,
+      ),
+      child: Container(
+        height: 100.0,
+        color: keyColor,
+        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,106 +39,14 @@ class ZylofonApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                onPressed: () {
-                  playSound(1);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.red,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(2);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.orange,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(3);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.yellow,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(4);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.green,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(5);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.blue,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(6);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.indigo,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  playSound(7);
-                },
-                style: TextButton.styleFrom(
-                  padding: EdgeInsets.zero,
-                ),
-                child: Container(
-                  height: 100.0,
-                  color: Colors.purple,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
-                ),
-              ),
+              buildKey(keyNumber: 1, keyColor: Colors.red),
+              buildKey(keyNumber: 2, keyColor: Colors.orange),
+              buildKey(keyNumber: 3, keyColor: Colors.yellow),
+              buildKey(keyNumber: 4, keyColor: Colors.green),
+              buildKey(keyNumber: 5, keyColor: Colors.blue),
+              buildKey(keyNumber: 6, keyColor: Colors.indigo),
+              buildKey(keyNumber: 7, keyColor: Colors.purple),
             ],
           ),
         ),
