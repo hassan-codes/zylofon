@@ -6,6 +6,11 @@ void main() {
 }
 
 class ZylofonApp extends StatelessWidget {
+  void playSound(int noteNumber) {
+    final player = AudioCache();
+    player.play('note$noteNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +24,7 @@ class ZylofonApp extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playSound(1);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -35,8 +39,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note2.wav');
+                  playSound(2);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -51,8 +54,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playSound(3);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -67,8 +69,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                  playSound(4);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -83,8 +84,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                  playSound(5);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -99,8 +99,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note6.wav');
+                  playSound(6);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
@@ -115,8 +114,7 @@ class ZylofonApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note7.wav');
+                  playSound(7);
                 },
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
