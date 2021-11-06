@@ -19,8 +19,11 @@ class ZylofonApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: () {
@@ -31,7 +34,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.red,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -46,7 +48,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.orange,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -61,7 +62,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.yellow,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -76,7 +76,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.green,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -91,7 +90,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.blue,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -106,7 +104,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.indigo,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
@@ -121,7 +118,6 @@ class ZylofonApp extends StatelessWidget {
                 ),
                 child: Container(
                   height: 100.0,
-                  width: 100.0,
                   color: Colors.purple,
                   padding:
                       EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
